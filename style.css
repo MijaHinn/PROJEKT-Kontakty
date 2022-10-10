@@ -15,3 +15,103 @@ Mobil   0 - 539px
 Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
+
+
+/* Mobil   0 - 539px */
+.kontejner h1 {
+	text-align: center;
+}
+
+.kontakty {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+	row-gap: 20px;
+}
+
+.kontakt {
+	border: 1px solid rgba(148, 148, 148, .2);
+	padding: 20px; /* nastavit 10px a bude to ok */
+	border-radius: 10px;
+	box-shadow: 0px 2px 2px #c4c4c4;
+	text-align: center;
+}
+
+.foto img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+
+/* Tablet  540px - 959px (čti jako 540px a víc) */
+@media screen and (min-width: 540px) {
+
+	.kontakty {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.kontakty h2 {
+		font-size: 16px;
+	}
+
+	.kontakty p {
+		font-size: 13px;
+	}
+	
+	.kontakt {
+		display: flex;
+		flex: 0 0 calc((100% - 20px) / 2);
+		gap: 20px;
+		text-align: left;
+	}
+
+	.foto {
+		flex: 1 1 30%;
+		align-self: baseline;
+	}
+
+	.popisek {
+		flex: 1 1 70%;
+	}
+
+	.foto img {
+		min-width: 80px;
+	}
+
+}
+
+
+/* PC      960px a víc */
+@media screen and (min-width: 960px) {
+
+	.kontakty h2 {
+		font-size: 24px;
+	}
+
+	.kontakty p {
+		font-size: 14px;
+	}
+
+	.kontakty {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		column-gap: 20px;
+	}
+	.kontakt {
+		flex-direction: column;
+		flex: 1 1 25%;
+		text-align: center;
+	}
+
+	.foto {
+		align-self: center;
+	}
+
+}
+
+
+
+
+
