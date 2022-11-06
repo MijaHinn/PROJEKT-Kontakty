@@ -17,16 +17,13 @@ PC      960px a víc
 */
 
 
-/* Mobil   0 - 539px */
+/* --- Mobil   0 - 539px --- */
 .kontejner h1 {
 	text-align: center;
 }
 
 .kontakty {
-	display: flex;
-	flex-direction: column;
 	padding: 0 10px;
-	row-gap: 20px;
 }
 
 .kontakt {
@@ -35,6 +32,7 @@ PC      960px a víc
 	border-radius: 10px;
 	box-shadow: 0px 2px 2px #c4c4c4;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .foto img {
@@ -42,18 +40,22 @@ PC      960px a víc
 	border-radius: 50%;
 }
 
+.popisek p {
+	margin: 0;
+}
 
-/* Tablet  540px - 959px (čti jako 540px a víc) */
+
+/* --- Tablet  540px - 959px (čti jako 540px a víc) --- */
 @media screen and (min-width: 540px) {
 
 	.kontakty {
-		flex-direction: row;
+		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
 
 	.kontakty h2 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	.kontakty p {
@@ -83,7 +85,7 @@ PC      960px a víc
 }
 
 
-/* PC      960px a víc */
+/* --- PC      960px a víc --- */
 @media screen and (min-width: 960px) {
 
 	.kontakty h2 {
@@ -95,7 +97,6 @@ PC      960px a víc
 	}
 
 	.kontakty {
-		flex-direction: row;
 		flex-wrap: nowrap;
 		column-gap: 20px;
 	}
